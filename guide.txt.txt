@@ -1,0 +1,22 @@
+Smart Contract for ERC-20
+
+	ERC20 is a commonly used token standard with 3 important functions, Transfer,Approve,TransferForm
+
+Transfer:
+	transfer token from msg.sender to antother account
+Approve:
+	Approve another account to spend your token's
+Transform:
+	Approved account can transfer tokens on your behalf.
+A common scenario to use approve and transForm is the following
+	
+	Step1:
+		You approve a contract to spend some of your tokens
+	Step2:
+		Next the contract calls transForm to transfer tokens from you into the contract
+
+In the given Contract the tokens are transfered to five different slabs defined in the contract
+Each of capacity say[slab1,slab2,slab3,slab3,slab4,slab5] 100,200,300,400,500
+If the amount transfered is above the maximum capacity then it goes to the next lower level.
+
+When the depositer enquires, getSlab function used in the contract  states shich slab the deposit is.
