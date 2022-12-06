@@ -1,0 +1,16 @@
+IERC20 is an interface for ERC20 token standards
+
+ERC20 contract is declared
+the  Total supply,Name,Coin short name,Number of decimals allowed where initialised
+
+There is a constructor to check total supply equal to balance of the owner '
+
+Then defined functions to return total supply, In which slab the depositer initiate deposite and balance of tokens owners
+
+the transfer function declared to add tokens to each slab
+
+the function approve to delegate the authority to spend to another account
+
+function allowance will provide the allowed token to spent by the delegated account
+
+transferForm function used to transfer or sell the allowed token by the delegate account to a buyer
