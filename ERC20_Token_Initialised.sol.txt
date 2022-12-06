@@ -1,0 +1,14 @@
+contract ERC20Basic is IERC20 {
+
+    string public constant name = "ANANDHUTOKEN";
+    string public constant symbol = "AOT";
+    uint8 public constant decimals = 18;
+
+
+    mapping(address => uint256) balances;
+
+    mapping(address => mapping (address => uint256)) allowed;
+
+    uint256 totalSupply_ = 10 ether;
+    uint256 slab = 100;
+    
