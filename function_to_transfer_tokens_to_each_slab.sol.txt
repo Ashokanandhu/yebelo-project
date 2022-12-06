@@ -1,0 +1,23 @@
+
+
+    function transfer(address receiver, uint256 numTokens) public override returns (bool) {
+          if (numTokens == slab && slab ==100){
+            slab =200;
+        } else if (numTokens == slab && slab ==200){
+            slab =300;
+        } else if (numTokens == slab && slab ==300){
+            slab =400;
+        } else if (numTokens == slab && slab ==400){
+            slab =500;
+        } else if (numTokens == slab && slab ==500){
+            slab =100;
+        }
+        else {
+            return false;
+        }
+        require(numTokens <= balances[msg.sender],"");
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
+        emit Transfer(msg.sender, receiver, numTokens);
+        return true;
+    }
