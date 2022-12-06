@@ -1,0 +1,3 @@
+ function allowance(address owner, address delegate) public override view returns (uint) {
+        return allowed[owner][delegate];
+    }
